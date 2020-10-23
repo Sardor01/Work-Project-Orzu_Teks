@@ -50,6 +50,7 @@ a {
 /* Main Header */
 .main__navbar {
   padding: 0;
+  position: relative;
 }
 
 .nav__item {
@@ -72,6 +73,7 @@ a {
 
 .custom__select {
   position: relative;
+  display: inline-block;
   align-self: stretch;
 
   select {

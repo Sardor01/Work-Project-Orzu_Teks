@@ -53,6 +53,12 @@
   .grid-2-to-3 {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .custom__select {
+    position: absolute;
+    right: 70px;
+    top: 15px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
