@@ -134,17 +134,17 @@ a {
 /* About Us component */
 .about__img {
   width: 100%;
-  height: auto;
+  max-height: 350px;
   max-width: 300px;
   align-self: center;
   justify-self: center;
-  -webkit-box-shadow: -50px -120px 1.5px -15px rgba(0, 0, 0, 0.03);
-  -moz-box-shadow: -50px -120px 1.5px -15px rgba(0, 0, 0, 0.03);
-  box-shadow: -50px -120px 1.5px -15px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: -50px -80px 1.5px -10px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: -50px -80px 1.5px -10px rgba(0, 0, 0, 0.03);
+  box-shadow: -50px -80px 1.5px -10px rgba(0, 0, 0, 0.03);
 }
 
 .about__text {
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .custom_ol {
@@ -263,8 +263,8 @@ a {
 .manufacture__img,
 .manufacture__models {
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 170px;
   overflow: hidden;
 
   img {

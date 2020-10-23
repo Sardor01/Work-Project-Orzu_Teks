@@ -1,8 +1,8 @@
 <template>
   <div id="aboutUs" class="container">
-    <div class="row justify-content-between my-lg-4 my-md-3 my-1 py-lg-2 py-1">
+    <div class="row justify-content-between my-lg-5 my-md-4 my-1 py-lg-3 py-1">
       <div
-        class="col-md-5 d-flex justify-content-center align-items-end order-md-1 order-2"
+        class="col-lg-5 d-flex justify-content-center align-items-end order-lg-1 order-2"
       >
         <img
           src="../../assets/AboutUsMain.png"
@@ -10,7 +10,7 @@
           alt="Image 1"
         />
       </div>
-      <div class="col-md-7 justify-content-start my-4 order-md-2 order-1">
+      <div class="col-lg-7 justify-content-start my-4 order-lg-2 order-1">
         <h1 class="text-uppercase section__title mb-4">О Нас</h1>
 
         <p class="about__text">
