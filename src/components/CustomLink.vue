@@ -1,12 +1,12 @@
 <template>
-  <button :type="type" :class="className" class="btn btn-yellow">
+  <a :href="link" :class="className" class="btn btn-yellow">
     {{ text }}
-  </button>
+  </a>
 </template>
 
 <script>
   export default {
-    name: "CustomButton",
+    name: "CustomLink",
     props: {
       text: {
         type: String,
@@ -15,7 +15,7 @@
       className: {
         type: String,
       },
-      type: {
+      link: {
         type: String,
       },
     },

@@ -19,10 +19,31 @@
 
           <div class="sm mt-3">
             <small class="text-muted text-uppercase">Социальные сети</small>
-            <div class="mt-1">
-              <a href="#"><i class="fab fa-telegram fa-2x mr-2"></i></a>
-              <a href="#"><i class="fab fa-facebook fa-2x mr-2"></i></a>
-              <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <div class="mt-2 d-flex">
+              <div class="sm__rounded mr-3 telegram">
+                <a href="#">
+                  <i
+                    class="fab fab fa-telegram-plane"
+                    style="color: #fff; font-size: 15px"
+                  ></i>
+                </a>
+              </div>
+              <div class="sm__rounded mr-3 facebook">
+                <a href="#">
+                  <i
+                    class="fab fa-facebook-f"
+                    style="color: #fff; font-size: 15px"
+                  ></i>
+                </a>
+              </div>
+              <div class="sm__rounded instagram">
+                <a href="#">
+                  <i
+                    class="fab fa-instagram"
+                    style="color: #fff; font-size: 15px"
+                  ></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -30,13 +51,14 @@
       <div class="col-md-6 col-12 mt-5 mt-md-0">
         <h1 class="text-uppercase section__title">Обратная связь</h1>
 
-        <form>
+        <form @submit.prevent="handleSubmit">
           <div class="form__group mb-3">
             <input
               type="text"
               name="fullName"
               class="form__field"
               placeholder="ФИО"
+              v-model="form.fullName"
             />
             <label for="fullName" class="form__label">ФИО</label>
           </div>
@@ -47,6 +69,7 @@
               name="phone"
               class="form__field"
               placeholder="Телефон"
+              v-model="form.phone"
             />
             <label for="phone" class="form__label">Телефон</label>
           </div>
@@ -56,9 +79,18 @@
               name="message"
               class="form__field"
               placeholder="Your Message"
-              rows="5"
+              rows="6"
+              v-model="form.message"
             ></textarea>
             <label for="message" class="form__label">Комментарий</label>
+          </div>
+
+          <div class="d-flex justify-content-end mt-4">
+            <CustomButton
+              type="submit"
+              className="text-center d-inline-block submitBtn"
+              text="Отправить"
+            />
           </div>
         </form>
       </div>
@@ -67,12 +99,52 @@
 </template>
 
 <script>
+  import CustomButton from "@/components/CustomButton";
+
   export default {
     name: "ContactPage",
+    components: {
+      CustomButton,
+    },
+    data() {
+      return {
+        form: {
+          fullName: "",
+          phone: "",
+          message: "",
+        },
+      };
+    },
+    methods: {
+      handleSubmit() {
+        console.log(JSON.stringify(this.form));
+
+        // custom reset instead of @reset.prevent="smFunction"
+        this.form.fullName = "";
+        this.form.phone = "";
+        this.form.message = "";
+      },
+    },
   };
 </script>
 
 <style lang="scss" scoped>
+  .sm__rounded {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d2d2d2;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .facebook {
+    background-color: #4867aa;
+  }
+
   .form__group {
     position: relative;
     padding: 15px 0 0;
@@ -120,5 +192,21 @@
   .form__field:focus {
     padding-bottom: 6px;
     border-bottom: 2px solid #0e19ae;
+  }
+
+  .submitBtn {
+    position: relative;
+
+    &::after {
+      content: "\27F6";
+      display: inline-block;
+      margin-left: 0.5rem;
+      transform: translateX(0);
+      transition: transform 0.25s ease-in-out;
+    }
+
+    &:hover::after {
+      transform: translateX(4.5px);
+    }
   }
 </style>

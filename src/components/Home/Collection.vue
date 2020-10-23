@@ -1,14 +1,14 @@
 <template>
-  <div id="collection" class="container my-5 py-2">
+  <div id="collection" class="container my-5 py-3">
     <h1 class="text-center text-uppercase section__title">Коллекция</h1>
 
-    <div class="my-5 py-3">
+    <div class="my-2 py-3">
       <!-- Tab links -->
-      <div class="tabs">
+      <div class="tabs d-flex justify-content-center flex-wrap">
         <button
           :key="idx"
           v-for="(tab, idx) in tabNames"
-          class="tab"
+          class="tab col-lg-2 col-md-3 col"
           :class="{ active: activeTab === tab }"
           @click="OpenTab(tab)"
         >
@@ -21,18 +21,21 @@
         <div
           :key="content.id"
           v-for="content in tabContent"
-          class="col-lg-4 col-6 mb-3 text-center tab__content collection__tab"
+          class="col-lg-4 col-6 mb-4 tab__content collection__tab"
         >
-          <div class="position-relative overflow-hidden">
-            <img :src="content.img" class="w-100" alt="" />
-            <div class="tab__imgText">{{ content.name }}</div>
+          <div
+            class="position-relative overflow-hidden text-center text-uppercase d-flex justify-content-center align-items-center"
+          >
+            <img :src="content.img" class="tab__img" alt="" />
+            <div class="tab__text">{{ content.name }}</div>
             <div class="tab__opacity"></div>
           </div>
         </div>
       </div>
 
       <div class="d-flex justify-content-center mt-4">
-        <CustomButton
+        <CustomLink
+          link="#"
           className="text-center d-inline-block"
           text="Посмотреть все"
         />
@@ -42,12 +45,12 @@
 </template>
 
 <script>
-  import CustomButton from "@/components/CustomButton";
+  import CustomLink from "@/components/CustomLink";
 
   export default {
     name: "Collection",
     components: {
-      CustomButton,
+      CustomLink,
     },
     data() {
       return {

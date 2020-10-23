@@ -8,6 +8,7 @@
     <Collection />
     <Partners />
     <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -15,6 +16,7 @@
   // @ is an alias to /src
   import Header from "@/shells/Header";
   import Contact from "@/shells/Contact";
+  import Footer from "@/shells/Footer";
 
   import ShowCaseSlider from "@/components/Home/ShowCaseSlider";
   import AboutUs from "@/components/Home/AboutUs";
@@ -34,6 +36,7 @@
       Collection,
       Partners,
       Contact,
+      Footer,
     },
   };
 </script>

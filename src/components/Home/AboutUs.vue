@@ -1,6 +1,6 @@
 <template>
   <div id="aboutUs" class="container">
-    <div class="row justify-content-between my-lg-5 my-md-4 my-2 py-lg-4 py-1">
+    <div class="row justify-content-between my-lg-4 my-md-3 my-1 py-lg-2 py-1">
       <div
         class="col-md-5 d-flex justify-content-center align-items-end order-md-1 order-2"
       >
@@ -11,9 +11,9 @@
         />
       </div>
       <div class="col-md-7 justify-content-start my-4 order-md-2 order-1">
-        <h1 class="text-uppercase section__title">О Нас</h1>
+        <h1 class="text-uppercase section__title mb-4">О Нас</h1>
 
-        <p>
+        <p class="about__text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
           cumque numquam aperiam ducimus non, sint perferendis beatae vitae nisi
           voluptas qui, quis consectetur modi. Fuga minus ea modi, perspiciatis
@@ -21,14 +21,15 @@
           beatae illum?
         </p>
 
-        <ol>
-          <li>Lorem, ipsum.</li>
-          <li>dolor sit.</li>
-          <li>amet consectetur.</li>
+        <ol class="custom_ol">
+          <li data-icon="1">ПРОИЗВОДСТВО ПОЛОТНА</li>
+          <li data-icon="2">ПРОИЗВОДСТВО УНИФОРМЫ</li>
+          <li data-icon="3">ПРОИЗВОДСТВО ТКАНИ</li>
         </ol>
 
         <div class="mt-4">
-          <CustomButton
+          <CustomLink
+            link="#"
             className="text-center d-inline-block"
             text="Подробнее"
           />
@@ -42,7 +43,7 @@
         <button
           :key="idx"
           v-for="(tab, idx) in tabNames"
-          class="tab"
+          class="tab col-lg-2 col-md-3 col-4"
           :class="{ active: activeTab === tab }"
           @click="OpenTab(tab)"
         >
@@ -55,18 +56,21 @@
         <div
           :key="content.id"
           v-for="content in tabContent"
-          class="col-lg-3 col-md-4 col-6 mb-3 text-center tab__content"
+          class="col-lg-3 col-md-4 col-6 mb-4 tab__content aboutUs__tab"
         >
-          <div class="position-relative overflow-hidden">
-            <img :src="content.img" class="w-100" alt="" />
-            <div class="tab__imgText">{{ content.name }}</div>
+          <div
+            class="position-relative overflow-hidden text-center text-uppercase d-flex justify-content-center align-items-center"
+          >
+            <img :src="content.img" class="tab__img" alt="" />
+            <div class="tab__text">{{ content.name }}</div>
             <div class="tab__opacity"></div>
           </div>
         </div>
       </div>
 
       <div class="d-flex justify-content-center mt-4">
-        <CustomButton
+        <CustomLink
+          link="#"
           className="text-center d-inline-block"
           text="Посмотреть все"
         />
@@ -76,12 +80,12 @@
 </template>
 
 <script>
-  import CustomButton from "@/components/CustomButton";
+  import CustomLink from "@/components/CustomLink";
 
   export default {
     name: "AboutUs",
     components: {
-      CustomButton,
+      CustomLink,
     },
     data() {
       return {

@@ -43,7 +43,7 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="../../assets/partners/netlify.png"
+          src="../../assets/partners/partner3.png"
           width="55"
           height="100"
           alt="partner"
@@ -51,12 +51,13 @@
       </swiper-slide>
       <swiper-slide>
         <img
-          src="../../assets/partners/firebase.png"
+          src="../../assets/partners/partner4.png"
           width="55"
           height="100"
           alt="partner"
         />
       </swiper-slide>
+
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>

@@ -1,11 +1,27 @@
 <template>
   <swiper class="swiper showCaseSlider__container" :options="swiperOption">
     <swiper-slide>
-      <img
-        class="w-100 slider__img"
-        src="../../assets/sliderBackground.png"
-        alt=""
-      />
+      <div class="position-relative">
+        <img
+          class="slider__img"
+          src="../../assets/sliderBackground.png"
+          alt=""
+        />
+
+        <div class="slider__info">
+          <h1 class="slider__title">Осенняя</h1>
+          <p class="slider__text">Коллекция женской одежды</p>
+
+          <div class="d-flex justify-content-center mt-4">
+            <CustomLink
+              link="#"
+              className="text-center d-inline-block"
+              text="Посмотреть все"
+            />
+          </div>
+        </div>
+        <div class="slider__opacity"></div>
+      </div>
     </swiper-slide>
     <swiper-slide>
       <img
@@ -35,6 +51,8 @@
 </template>
 
 <script>
+  import CustomLink from "@/components/CustomLink";
+
   import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 
   import SwiperCore, {
@@ -52,6 +70,7 @@
     name: "ShowCaseSlider",
     title: "Autoplay",
     components: {
+      CustomLink,
       Swiper,
       SwiperSlide,
     },
@@ -83,10 +102,11 @@
 
 <style lang="scss" scoped>
   .swiper {
-    max-height: 80vh;
+    max-height: 500px;
     width: 100%;
 
     .swiper-slide {
+      overflow: hidden;
       position: relative;
       display: flex;
       justify-content: center;
@@ -100,7 +120,8 @@
 
   .slider__img {
     width: 100%;
-    height: auto;
+    max-height: 600px;
+    object-fit: cover;
     // margin-top: 270px;
   }
 
@@ -109,6 +130,24 @@
     color: #ccc;
     font-size: 1.1rem;
     font-weight: 700;
+  }
+
+  .slider__info {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .slider__opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.25s ease-in-out;
   }
 
   @media only screen and (min-width: 992px) {

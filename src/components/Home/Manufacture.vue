@@ -73,8 +73,9 @@
         </div>
       </div>
 
-      <div class="d-flex justify-content-center">
-        <CustomButton
+      <div class="d-flex justify-content-center mt-4">
+        <CustomLink
+          link="#"
           className="text-center d-inline-block"
           text="Посмотреть все"
         />
@@ -84,12 +85,12 @@
 </template>
 
 <script>
-  import CustomButton from "@/components/CustomButton";
+  import CustomLink from "@/components/CustomLink";
 
   export default {
     name: "Manufacture",
     components: {
-      CustomButton,
+      CustomLink,
     },
   };
 </script>
