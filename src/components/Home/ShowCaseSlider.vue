@@ -9,7 +9,7 @@
         />
 
         <div class="slider__info">
-          <h1 class="slider__title">Осенняя</h1>
+          <h1 class="slider__title text-uppercase">Осенняя</h1>
           <p class="slider__text">Коллекция женской одежды</p>
 
           <div class="d-flex justify-content-center mt-4">
@@ -108,21 +108,16 @@
     .swiper-slide {
       overflow: hidden;
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      font-weight: bold;
-      font-size: 1.2rem;
-      background: #fff;
+      color: #fff;
     }
   }
 
   .slider__img {
     width: 100%;
-    max-height: 600px;
+    max-height: 500px;
     object-fit: cover;
-    // margin-top: 270px;
+    object-position: 0 0;
   }
 
   .swiper-button-prev:after,
@@ -138,6 +133,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .slider__title {
+    font-weight: 600;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
   }
 
   .slider__opacity {

@@ -55,6 +55,7 @@
           <div class="form__group mb-3">
             <input
               type="text"
+              autocomplete="off"
               name="fullName"
               class="form__field"
               placeholder="ФИО"
@@ -66,6 +67,7 @@
           <div class="form__group mb-3">
             <input
               type="text"
+              autocomplete="off"
               name="phone"
               class="form__field"
               placeholder="Телефон"
@@ -77,6 +79,7 @@
           <div class="form__group mb-3">
             <textarea
               name="message"
+              autocomplete="off"
               class="form__field"
               placeholder="Your Message"
               rows="6"
