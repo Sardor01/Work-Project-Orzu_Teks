@@ -16,7 +16,7 @@
             <CustomLink
               link="#"
               className="text-center d-inline-block"
-              text="Посмотреть все"
+              text="Подробнее"
             />
           </div>
         </div>
@@ -102,7 +102,7 @@
 
 <style lang="scss" scoped>
   .swiper {
-    max-height: 600px;
+    max-height: 550px;
     width: 100%;
 
     .swiper-slide {
@@ -115,7 +115,7 @@
 
   .slider__img {
     width: 100%;
-    max-height: 600px;
+    max-height: 550px;
     object-fit: cover;
     object-position: 0 0;
   }
@@ -146,7 +146,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 550px;
     background-color: rgba(0, 0, 0, 0.5);
     transition: background-color 0.25s ease-in-out;
   }

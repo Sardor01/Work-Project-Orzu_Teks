@@ -39,13 +39,13 @@
 
     <div class="my-5 py-3">
       <!-- Tab links -->
-      <div class="tabs">
+      <div class="tabs aboutUs__tab">
         <button
           :key="idx"
           v-for="(tab, idx) in tabNames"
-          class="tab col-lg-2 col-md-3 col-4"
+          class="tab"
           :class="{ active: activeTab === tab }"
-          @click="OpenTab(tab)"
+          @click="OpenTab"
         >
           {{ tab }}
         </button>
@@ -56,12 +56,12 @@
         <div
           :key="content.id"
           v-for="content in tabContent"
-          class="col-lg-3 col-md-4 col-6 mb-4 tab__content aboutUs__tab"
+          class="col-lg-3 col-md-4 col-6 mb-4 tab__content"
         >
           <div
             class="position-relative overflow-hidden text-center text-uppercase d-flex justify-content-center align-items-center"
           >
-            <img :src="content.img" class="tab__img" alt="" />
+            <img :src="content.img" class="tab__img aboutUs__img" alt="" />
             <div class="tab__text">{{ content.name }}</div>
             <div class="tab__opacity"></div>
           </div>
@@ -91,7 +91,7 @@
       return {
         activeTab: "",
         tabContent: [],
-        tabNames: ["Полотно", "Ткани"],
+        tabNames: ["Полотно", "", "", "Ткани"],
         tabs: [
           {
             id: 1,
@@ -205,18 +205,36 @@
       };
     },
     methods: {
-      OpenTab(tab) {
-        this.tabs.forEach((t) => {
-          if (tab === t.tabName) {
-            this.activeTab = t.tabName;
-            this.tabContent = t.tabContent;
+      OpenTab(e) {
+        if (e.target.innerText !== "") {
+          Array.from(e.target.parentElement.children).forEach((el) => {
+            el.classList.remove("bg-main-color");
+          });
+
+          if (e.target.nextElementSibling) {
+            // console.log(e.target.nextElementSibling);
+            e.target.nextElementSibling.classList.add("bg-main-color");
+          } else {
+            e.target.previousElementSibling.classList.add("bg-main-color");
           }
-        });
+
+          this.tabs.forEach((t) => {
+            if (e.target.innerText === t.tabName) {
+              this.activeTab = t.tabName;
+              this.tabContent = t.tabContent;
+            }
+          });
+        }
       },
     },
     created() {
       this.tabContent = this.tabs[0].tabContent;
       this.activeTab = this.tabs[0].tabName;
+    },
+    mounted() {
+      document
+        .querySelector(".tab.active")
+        .nextElementSibling.classList.add("bg-main-color");
     },
   };
 </script>

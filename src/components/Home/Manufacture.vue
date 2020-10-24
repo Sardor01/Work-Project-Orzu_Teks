@@ -14,34 +14,38 @@
             />
           </div>
           <div class="manufacture__img">
-            <img
-              src="../../assets/manufacture/fashionBlueBox.png"
-              alt="fashion"
-            />
+            <div class="scaling">
+              <img
+                src="../../assets/manufacture/fashionBlueBox.png"
+                alt="fashion"
+              />
 
-            <div class="fashion__text">
-              <div class="fashion__name">Gloria Jeans</div>
+              <div class="fashion__text">
+                <div class="fashion__name">Gloria Jeans</div>
 
-              <div class="line"></div>
+                <div class="line"></div>
 
-              <img src="../../assets/manufacture/gloriaJeans.png" alt="" />
+                <img src="../../assets/manufacture/gloriaJeans.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
 
         <div class="fashion d-flex flex-lg-column align-items-stretch">
           <div class="manufacture__img">
-            <img
-              src="../../assets/manufacture/fashionBlueBox.png"
-              alt="fashion"
-            />
+            <div class="scaling">
+              <img
+                src="../../assets/manufacture/fashionBlueBox.png"
+                alt="fashion"
+              />
 
-            <div class="fashion__text">
-              <div class="fashion__name">Zara</div>
+              <div class="fashion__text">
+                <div class="fashion__name">Zara</div>
 
-              <div class="line"></div>
+                <div class="line"></div>
 
-              <img src="../../assets/manufacture/zara.png" alt="" />
+                <img src="../../assets/manufacture/zara.png" alt="" />
+              </div>
             </div>
           </div>
           <div class="manufacture__models">
@@ -57,17 +61,19 @@
             />
           </div>
           <div class="manufacture__img">
-            <img
-              src="../../assets/manufacture/fashionBlueBox.png"
-              alt="fashion"
-            />
+            <div class="scaling">
+              <img
+                src="../../assets/manufacture/fashionBlueBox.png"
+                alt="fashion"
+              />
 
-            <div class="fashion__text">
-              <div class="fashion__name">Tommy Hilfiger</div>
+              <div class="fashion__text">
+                <div class="fashion__name">Tommy Hilfiger</div>
 
-              <div class="line"></div>
+                <div class="line"></div>
 
-              <img src="../../assets/manufacture/tommyHill.png" alt="" />
+                <img src="../../assets/manufacture/tommyHill.png" alt="" />
+              </div>
             </div>
           </div>
         </div>

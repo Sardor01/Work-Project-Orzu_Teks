@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" class="main__navbar">
+  <b-navbar toggleable="lg" class="main__navbar mx-auto">
     <div class="container-lg container-fluid-md py-2 px-1">
       <b-navbar-brand href="#" class="mr-auto ml-lg-5 ml-3">
         <img
@@ -16,7 +16,7 @@
       ></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav class="mr-auto">
+        <b-navbar-nav class="mr-auto justify-content-between w-100">
           <b-nav-item class="nav__item ml-lg-5">
             <a href="#" class="nav__link">Главная</a>
           </b-nav-item>

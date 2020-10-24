@@ -26,7 +26,7 @@
           <div
             class="position-relative overflow-hidden text-center text-uppercase d-flex justify-content-center align-items-center"
           >
-            <img :src="content.img" class="tab__img" alt="" />
+            <img :src="content.img" class="tab__img collection__img" alt="" />
             <div class="tab__text">{{ content.name }}</div>
             <div class="tab__opacity"></div>
           </div>
