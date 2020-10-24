@@ -51,6 +51,10 @@
         swiperOption: {
           spaceBetween: 50,
           loop: false,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
           grabCursor: true,
           pagination: {
             el: ".swiper-pagination",
