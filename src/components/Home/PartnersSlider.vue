@@ -1,61 +1,18 @@
 <template>
   <div :class="className" class="PartnersSlider__container">
     <swiper class="swiper" :options="swiperOption">
-      <swiper-slide>
-        <img
-          src="../../assets/partners/partner1.png"
-          width="55"
-          height="100"
-          alt="partner"
-        />
-      </swiper-slide>
-      <swiper-slide>
-        <img
-          src="../../assets/partners/partner2.png"
-          width="55"
-          height="100"
-          alt="partner"
-        />
-      </swiper-slide>
-      <swiper-slide>
-        <img
-          src="../../assets/partners/partner3.png"
-          width="55"
-          height="100"
-          alt="partner"
-        />
-      </swiper-slide>
-      <swiper-slide>
-        <img
-          src="../../assets/partners/partner4.png"
-          width="55"
-          height="100"
-          alt="partner"
-        />
-      </swiper-slide>
-      <swiper-slide>
-        <img
-          src="../../assets/partners/partner5.png"
-          width="55"
-          height="100"
-          alt="partner"
-        />
-      </swiper-slide>
-      <swiper-slide>
-        <img
-          src="../../assets/partners/partner3.png"
-          width="55"
-          height="100"
-          alt="partner"
-        />
-      </swiper-slide>
-      <swiper-slide>
-        <img
-          src="../../assets/partners/partner4.png"
-          width="55"
-          height="100"
-          alt="partner"
-        />
+      <swiper-slide
+        :key="partner.id"
+        v-for="partner in partners"
+        class="d-flex justify-content-center align-items-center py-3"
+      >
+        <a :href="partner.partnerUrl">
+          <img
+            :src="partner.partnerImg"
+            width="120"
+            :alt="partner.partnerName"
+          />
+        </a>
       </swiper-slide>
 
       <div class="swiper-pagination" slot="pagination"></div>
@@ -118,6 +75,50 @@
             },
           },
         },
+        partners: [
+          {
+            id: 1,
+            partnerImg: "https://vuejs.org/images/vuejobs.png",
+            partnerUrl: "https://vuejobs.com",
+            partnerName: "Vue Jobs",
+          },
+          {
+            id: 2,
+            partnerImg: "https://vuejs.org/images/laravel.png",
+            partnerUrl: "https://laravel.com",
+            partnerName: "Laravel",
+          },
+          {
+            id: 3,
+            partnerImg: "https://vuejs.org/images/vehikl.png",
+            partnerUrl: "https://vehikl.com",
+            partnerName: "Vehikl",
+          },
+          {
+            id: 4,
+            partnerImg: "https://vuejs.org/images/neds.png",
+            partnerUrl: "https://neds.com.au",
+            partnerName: "Neds",
+          },
+          {
+            id: 5,
+            partnerImg: "https://vuejs.org/images/vpnranks.png",
+            partnerUrl: "https://www.vpnranks.com",
+            partnerName: "VPNRanks",
+          },
+          {
+            id: 6,
+            partnerImg: "https://vuejs.org/images/usave.png",
+            partnerUrl: "https://usave.co.uk/utilities/broadband",
+            partnerName: "usave",
+          },
+          {
+            id: 7,
+            partnerImg: "https://vuejs.org/images/tendermint.png",
+            partnerUrl: "https://cosmos.network",
+            partnerName: "Vue Jobs",
+          },
+        ],
       };
     },
   };

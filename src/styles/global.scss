@@ -218,6 +218,12 @@ a {
   }
 }
 
+.collection__tab {
+  .tab+.tab {
+    margin-left: 1rem;
+  }
+}
+
 .tab__content {
   color: #fff;
   overflow: hidden;

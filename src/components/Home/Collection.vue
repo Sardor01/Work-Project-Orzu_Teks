@@ -4,11 +4,11 @@
 
     <div class="my-2 py-3">
       <!-- Tab links -->
-      <div class="tabs d-flex justify-content-center flex-wrap">
+      <div class="tabs collection__tab">
         <button
           :key="idx"
           v-for="(tab, idx) in tabNames"
-          class="tab col-lg-2 col-md-3 col"
+          class="tab"
           :class="{ active: activeTab === tab }"
           @click="OpenTab(tab)"
         >
@@ -21,7 +21,7 @@
         <div
           :key="content.id"
           v-for="content in tabContent"
-          class="col-lg-4 col-6 mb-4 tab__content collection__tab"
+          class="col-lg-4 col-6 mb-4 tab__content"
         >
           <div
             class="position-relative overflow-hidden text-center text-uppercase d-flex justify-content-center align-items-center"

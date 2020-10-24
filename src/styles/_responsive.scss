@@ -132,6 +132,12 @@
       margin-right: 1.5rem;
     }
   }
+
+  .collection__tab {
+    .tab+.tab {
+      margin-left: 4.5rem;
+    }
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
