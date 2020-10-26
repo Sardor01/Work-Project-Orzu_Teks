@@ -4,13 +4,13 @@
 @import "~swiper/components/navigation/navigation.scss";
 @import "~swiper/components/pagination/pagination.scss";
 @import "~swiper/components/scrollbar/scrollbar.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
+@import 'fonts';
 @import 'variables';
 @import 'helpers';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
   line-height: 1.4;
 }
 
